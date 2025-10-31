@@ -42,7 +42,9 @@ print(project_tags)
 
 # print the full details of user with ID of 101 in text format (in a sentence)
 user101 = convert['user']
-print(f"The User with ID of {user101['id']} is {user101['name']}, lives at No {user101['address']['street']} street, in the city of {user101['address']['city']}.")
-print(f"With a geo-political map of ({user101['address']['geo']['lat']}) latitude ({user101['address']['geo']['lng']}) and longitude." )
-print(F"Has the roles of: {user101['roles'][0]}, {user101['roles'][1]} and currently working on {len(user101['projects'])} projects,")
-print(f"With the first title of {user101['projects'][0]['title']} in the year {user101['projects'][0]['year']} with {len(user101['projects'][0]['tags'])} tags.")
+print(f"""
+The user with ID of {user101['id']} is {user101['name']}, lives at No {user101['address']['street']} street in the city of {user101['address']['city']},
+with a geo-political map of ({user101['address']['geo']['lat']}) latitude and ({user101['address']['geo']['lng']}) longitude.
+Has the roles of: {user101['roles'][0]}, {user101['roles'][1]}, and is currently working on {len(user101['projects'])} projects,
+the first project title is "{user101['projects'][0]['title']}" from the year {user101['projects'][0]['year']}, with {len(user101['projects'][0]['tags'])} tags.
+""")
